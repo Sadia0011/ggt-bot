@@ -1,0 +1,159 @@
+<style>
+     .eyelash-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;
+        max-width: 1440px;
+        background-color: #F7F5F5;
+        padding: 60px ;
+    }
+     
+    .eyelash-title{
+        color: #272727;
+        text-align: center;
+        max-width: 925px;
+        margin: auto;
+        font-family: "Playfair Display";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 60px; /* 125% */
+        margin-bottom: 0;
+    }
+    .eyelash-title span{
+        color: #272727;
+        font-family: "Playfair Display";
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 60px;
+    }
+    .card{
+        display: inline-flex;
+        align-items: center;
+        gap: 60px;
+    }
+    .card-info{
+       display: flex;
+       flex-direction: column;
+       align-items: start;
+    }
+    .card-info-title{
+        color: #272727;
+        font-family: "Playfair Display";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 48px; /* 150% */
+    }
+    .card-price{
+        color: #E97191;
+        font-family: Satoshi;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        
+    }
+    .card-price span{
+        color: #2B2A2A;
+        font-family: Satoshi;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 120% */
+        text-decoration:line-through;
+        margin-right: 10px;
+    }
+    .card-subtitle{
+        color: #797979;
+        font-family: Satoshi;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .card-subtitle span{
+        color: #797979;
+        font-family: Satoshi;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+    }
+    .card-info button{
+        color: #FFF;
+        background-color: #E97191;
+        font-family: Satoshi;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; 
+        display: flex;
+        width: 374px;
+        padding: 14px 40px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+</style>
+
+
+<div class="eyelash-container">
+    <h1 class="eyelash-title">Komplettes Wimpern-Kit: Profitieren Sie von unserem <span>exklusiven Kombi-Angebot</span></h1>
+    <div class="card">
+        <div>
+            <img src="{{ section.settings.card-image | img_url: 'medium'}}" alt="">
+        </div>
+     <div class="card-info">
+        <h1 class="card-info-title">All-in-One Wimpern-Pack</h1>
+        <div>
+            {% for i in (1..5) %}
+                {% if i <= section.settings.review %}
+                    <span class="fa fa-star checked"></span>
+                {% else %}
+                    <span class="fa fa-star unchecked"></span>
+                {% endif %}
+            {% endfor %}(20)
+        </div>
+        <p class="card-price"><span>€113,60</span>€59,90</p>
+        <p class="card-subtitle">inkl. MwSt. zzgl. <span>Versandkosten</span>  </p>
+        <button>In den Warenkorb legen</button>
+     </div>
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "EyeLashKit",
+    "settings": [
+        {
+            "type":"image_picker",
+            "id": "card-image",
+            "label": "Card Image"
+        } ,
+           {
+      "type": "range",
+      "id": "review",
+      "label": "Review",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+        ],
+        "presets": [
+            {
+                "name": "EyeLashKit"
+            }
+        ]
+}
+{% endschema %}

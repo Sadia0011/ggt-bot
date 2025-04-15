@@ -1,0 +1,145 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+    .blog-container {
+        max-width: 1440px;
+        margin: auto;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .blog-title {
+        color: #272727;
+        font-family: "Playfair Display";
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 60px;
+        margin-bottom: 40px;
+    }
+    .blog-swipper {
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+    .blog-wrapper {
+        display: flex;
+    }
+    .blog-slide {
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+    }
+    .blog-slide img {
+        /* width: 120px; */
+        height: 236px;
+        object-fit: cover;
+    }
+    .review-name{
+        color: #272727;
+        text-align: center;
+        font-family: Satoshi;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px; /* 140% */
+    }
+    .review-stars {
+        margin: 10px 0;
+        color: #F2A0B6;
+    }
+    .review-text {
+        overflow: hidden;
+        color: #272727;
+        text-align: center;
+        text-overflow: ellipsis;
+        font-family: Satoshi;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+</style>
+
+<div class="blog-container">
+   <h1 class="blog-title">Wovon unsere <span>Kunden schwärmen</span></h1>
+   <div class="swiper blog-swipper">
+      <div class="swiper-wrapper blog-wrapper">
+         {% for block in section.blocks %}
+         <div class="swiper-slide blog-slide">
+            <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ block.settings.name }}">
+            <div class="review-stars"> 
+                {% for i in (1..block.settings.range) %} 
+                    <span class="fa fa-star checked"></span>
+                {% endfor %} 
+            </div>
+            <h3 class="review-name">{{ block.settings.name }}</h3>
+            <p class="review-text">{{ block.settings.review_text }}</p>
+         </div>
+         {% endfor %}
+      </div>
+      <div class="swiper-pagination blog-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+   </div>
+</div>
+
+<script>
+    var swiper = new Swiper(".blog-swipper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+</script>
+
+
+{% schema %}
+{
+    "name": "Blog-Container",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "Blog",
+            "name":"Blog",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "range",
+                    "id": "range",
+                    "max": 5,
+                    "min": 1,
+                    "step":1 ,
+                    "default": 5,
+                    "label": "Review"
+                },
+                {
+                    "type": "inline_richtext",
+                    "id": "name",
+                    "label": "Name",
+                    "default": "Jessica K."
+                },
+                {
+                    "type": "text",
+                    "id": "review_text",
+                    "label": "Review Text",
+                    "default": "Meine Freundin hat mir die Lashes empfohlen und Sie hat definitiv nicht übertrieben . Die Handhabung ist super einfach und ich habe noch nie so viele Komplimente für meine Wimpern bekommen . Ich liebe Sie . 2 weitere Freundinnen habe ich die Lashes bereits ans Herz gelegt . ♥️"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Blog-Container"
+        }
+    ]
+}
+{% endschema %}

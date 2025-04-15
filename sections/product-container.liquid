@@ -1,0 +1,232 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .product-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        /* padding: 20px; */
+        align-items: center;
+        justify-items: center;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .product-card {
+        text-align: center;
+        width: 300px;
+        height: auto;
+    }
+
+    .product-swiper {
+        width: 300px;
+        height: auto;
+        min-height: 396px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-swiper img {
+        object-fit: contain;
+        max-height: 100%;
+        width: 100%;
+    }
+    .product-information{
+        display: flex;
+        padding-top: 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+    }
+    .title {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .fa {
+        font-size: 18px;
+    }
+
+    .checked {
+        color:  #F2A0B6;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #272727;
+        margin: 0;
+    }
+    .swiper-pagination-bullet-active {
+        background: #E97191;;
+    }
+    .button-cls{
+        max-width: 1440px;
+        margin: auto;
+    }
+    .product-button{
+        display: flex;
+        width: 200px;
+        padding: 14px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #E97191;
+        color: #FFF;
+        font-family: Satoshi;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        border: none;
+        max-width: 1440px;
+        margin: 40px auto;
+    }
+    @media (max-width: 1024px) {
+        .product-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .product-swiper {
+            height: 350px;
+        }
+    }
+    @media (max-width: 768px) {
+        .product-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .product-swiper {
+            height: 300px;
+        }
+
+        .title, .price {
+            font-size: 14px;
+        }
+
+        .product-button {
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .product-swiper {
+            height: 250px;
+        }
+
+        .title, .price {
+            font-size: 12px;
+        }
+
+        .fa {
+            font-size: 16px;
+        }
+
+        .product-button {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+    }
+</style>
+
+
+<div class="product-container">
+    {% for block in section.blocks %}
+        <div class="product-card">
+            <div class="product-swiper swiper swiper-{{ forloop.index }}">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{ block.settings.product.featured_image | img_url: 'master' }}" alt="Product Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ block.settings.product2.featured_image | img_url: 'master' }}" alt="Product Image 2">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="product-information">
+                <a href="{{ block.settings.product.url }}">
+                    <h3 class="title">{{ block.settings.product.title }}</h3>
+                </a>
+                <div>
+                    {% for i in (1..block.settings.review) %}
+                        <span class="fa fa-star checked"></span>
+                    {% endfor %}
+                </div>
+                <p class="price">${{ block.settings.product.price }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<div class="button-cls">
+    <a  href="/collections/all" class="product-button">Alle anzeigen</a>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".product-swiper").forEach((swiperContainer, index) => {
+        new Swiper(`.swiper-${index + 1}`, {
+            loop: true,
+            slidesPerView: 1,
+            pagination: {
+                el: swiperContainer.querySelector(".swiper-pagination"),
+                clickable: true,
+            }
+        });
+    });
+});
+</script>
+
+
+{% schema %}
+{
+    "name": "Product Grid",
+    "blocks": [
+        {
+            "type": "product",
+            "name": "Product",
+            "settings": [
+               {
+                "type": "product",
+                "id": "product",
+                "label": "First Product"
+              },
+              {
+                "type": "product",
+                "id": "product2",
+                "label": "Second Product"
+              },
+               {
+                  "type": "range",
+                  "id": "review",
+                  "label": "Review",
+                  "min": 1,
+                  "max": 5,
+                  "step": 1,
+                  "default": 5
+              }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Grid",
+            "blocks": [
+                { "type": "product" }
+            ]
+        }
+    ]
+}
+{% endschema %}

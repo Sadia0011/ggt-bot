@@ -1,0 +1,33 @@
+<style>
+    .logo-bar{
+        display: flex;
+        max-width: 100%;
+        padding: 24px 26px;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        background-color: #F7F6F5;;
+    }
+</style>
+
+
+<div class="logo-bar">
+     {% render "icon-rossman" %}
+     {% render "icon-dm" %}
+     {% render "icon-amazon" %}
+</div>
+
+
+{% schema %}
+{
+    "name": "logo-bar",
+    "settings": [
+        
+        ],
+        "presets": [
+            {
+                "name": "logo-bar"
+            }
+        ]
+}
+{% endschema %}
