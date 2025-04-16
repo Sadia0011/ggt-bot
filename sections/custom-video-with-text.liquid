@@ -1,91 +1,123 @@
 {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-top: {{ section.settings.top_padding | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.bottom_padding | times: 0.75 | round: 0 }}px;
     }
-    .video-container{
-        max-width: 70%;
-        margin: auto;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-        padding:2rem;
+  
+    .video-container {
+      max-width: 70%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      padding: 2rem;
     }
+  
+    .custom-heading {
+      font-size: {{ block.settings.heading_font_size }}px;
+    }
+  
+    .custom-description {
+      font-size: {{ block.settings.description_font_size }}px;
+    }
+  
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-top: {{ section.settings.top_padding }}px;
+        padding-bottom: {{ section.settings.bottom_padding }}px;
       }
     }
+  
     @media screen and (max-width: 769px) {
-        .video-container{
-            max-width: 100%;
-            flex-direction:column;
-        }
+      .video-container {
+        max-width: 100%;
+        flex-direction: column;
+      }
     }
+  
     @media screen and (max-width: 512px) {
-        iframe{
-            width:350px;
-        }
+      iframe {
+        width: 350px;
+      }
     }
   {%- endstyle -%}
-
-{% liquid
-assign video_id = section.settings.product_description_video.id | default: section.settings.video_url.id
-
-%}
-
-<div class="video-container">
-     <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ section.settings.product_description_video.id }}?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-     <div>
-        <h2 class="{{ section.settings.heading_font_size }}">{{ section.settings.heading }}</h2>
-        <p class="{{ section.settings.description_font_size }}">{{ section.settings.description }}</p>
-     </div>
-
-</div>
-
-
-
-{% schema %}
-{
+  
+  <div class="video-container section-{{ section.id }}-padding">
+    {% for block in section.blocks %}
+      <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ block.settings.product_description_video.id }}?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div>
+        <h2 style="font-size: {{ block.settings.heading_font_size }}px;">{{ block.settings.heading }}</h2>
+        <p style="font-size: {{ block.settings.description_font_size }}px;">{{ block.settings.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  
+  {% schema %}
+  {
     "name": "custom-video-with-text",
     "settings": [
-        {
+      {
+        "type": "range",
+        "id": "top_padding",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Top Padding",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "bottom_padding",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Bottom Padding",
+        "default": 16
+      }
+    ],
+    "blocks": [
+      {
+        "type": "video-with-text",
+        "name": "Video With Text",
+        "settings": [
+          {
             "type": "video_url",
             "id": "product_description_video",
             "label": "Product description video",
-            "accept": ["youtube","vimeo"]
-        },
-        {
-           "type":"header",
-           "content":"Header"
-        },
-        {
+            "accept": ["youtube", "vimeo"]
+          },
+          {
+            "type": "header",
+            "content": "Header"
+          },
+          {
             "type": "inline_richtext",
             "id": "heading",
             "default": "Anwendung des Bond Girl Mascara Wimpernklebers",
             "label": "Heading"
-        },
-        {
+          },
+          {
             "type": "range",
             "id": "heading_font_size",
             "min": 12,
-            "max": 24,
+            "max": 80,
             "step": 1,
             "unit": "px",
             "label": "Font size",
             "default": 16
-        },
-        {
+          },
+          {
             "type": "inline_richtext",
             "id": "description",
             "default": "So einfach geht’s: Trage den Bond Girl Mascara Wimpernkleber direkt am Wimpernansatz auf. Du kannst sofort loslegen und deine DIY Lash Extensions anbringen. Fertig ist dein Lash-Look!",
             "label": "Description"
-        },
-        {
+          },
+          {
             "type": "range",
             "id": "description_font_size",
             "min": 12,
@@ -94,33 +126,20 @@ assign video_id = section.settings.product_description_video.id | default: secti
             "unit": "px",
             "label": "Font size",
             "default": 16
-        },
-        {
-            "type": "range",
-            "id": "top_padding",
-            "min": 12,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "label": "Top Padding",
-            "default": 16
-        },
-        {
-            "type": "range",
-            "id": "bottom_padding",
-            "min": 12,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "label": "Bottom Padding",
-            "default": 16
-        }
-
-        ],
-        "presets": [
-            {
-                "name": "custom-video-with-text"
-            }
+          }
         ]
-}
-{% endschema %}
+      }
+    ],
+    "presets": [
+      {
+        "name": "custom-video-with-text",
+        "blocks": [
+          {
+            "type": "video-with-text"
+          }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
+  
