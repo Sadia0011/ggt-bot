@@ -18,6 +18,12 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+    @media screen and (max-width: 512px) {
+        .video-container{
+            max-width: 100%;
+            flex-direction:column;
+        }
+    }
   {%- endstyle -%}
 
 {% liquid
