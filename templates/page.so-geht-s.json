@@ -1,1 +1,198 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":28}},"video_We7qmA":{"type":"video","settings":{"heading":"","heading_size":"h1","enable_video_looping":false,"video_url":"https:\/\/www.youtube.com\/watch?v=YOH1UVkJqQM&t=13s","cover_image":"shopify:\/\/shop_images\/howtobondgirl-youtube_gX3A.webp","description":"<h3>Anwendung des Bond Girl Mascara Wimpernklebers<\/h3><p>So einfach geht’s: Trage den Bond Girl Mascara Wimpernkleber direkt am Wimpernansatz auf. Du kannst sofort loslegen und deine DIY Lash Extensions anbringen. Fertig ist dein Lash-Look!<\/p>","full_width":false,"color_scheme":"","padding_top":36,"padding_bottom":36}}},"order":["main","video_We7qmA"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_video_with_text_7DgDmV": {
+      "type": "custom-video-with-text",
+      "name": "custom-video-with-text",
+      "settings": {
+        "product_description_video": "https://www.youtube.com/watch?v=YOH1UVkJqQM",
+        "heading": "Anwendung des Bond Girl Mascara Wimpernklebers",
+        "heading_font_size": 16,
+        "description": "So einfach geht’s: Trage den Bond Girl Mascara Wimpernkleber direkt am Wimpernansatz auf. Du kannst sofort loslegen und deine DIY Lash Extensions anbringen. Fertig ist dein Lash-Look!",
+        "description_font_size": 16,
+        "top_padding": 16,
+        "bottom_padding": 16
+      }
+    },
+    "custom_video_with_text_9yqCC8": {
+      "type": "custom-video-with-text",
+      "name": "custom-video-with-text",
+      "settings": {
+        "product_description_video": "https://www.youtube.com/watch?v=fmUoDXdg0eA",
+        "heading": "Anwendung des YouGotThis Wimpernklebers aus der Tube",
+        "heading_font_size": 16,
+        "description": "Streiche eine Schicht des YouGotThis Wimpernklebers auf das Wimpernband deiner DIY Wimpernextensions. Lass den Kleber +/- 1 Minute antrocknen und platziere die Lash Extensions dann unter deinen Naturwimpern – done!",
+        "description_font_size": 16,
+        "top_padding": 16,
+        "bottom_padding": 16
+      }
+    },
+    "custom_video_with_text_XWhpnX": {
+      "type": "custom-video-with-text",
+      "name": "custom-video-with-text",
+      "settings": {
+        "product_description_video": "https://www.youtube.com/watch?v=IVAc5AJs_1Y",
+        "heading": "Tipps & Tricks für das perfekte Ergebnis",
+        "heading_font_size": 16,
+        "description": "Für den perfekten Lash-Look braucht’s manchmal nur ein paar kleine Kniffe. Hier findest du alle Tipps und Tricks, um das perfekte Ergebnis und die beste Haltbarkeit zu erzielen.",
+        "description_font_size": 16,
+        "top_padding": 16,
+        "bottom_padding": 16
+      }
+    },
+    "multirow_xRLyFd": {
+      "type": "multirow",
+      "blocks": {
+        "row_DHdtac": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/schritt-2_lNXH.jpg",
+            "caption": "",
+            "heading": "Nimm die Wimpern aus der Verpackung",
+            "text": "<h5></h5><p>Nimm nun die Wimpernextensions vorsichtig aus der Verpackung. Das geht am Einfachsten indem du die Wimpernsegmente mit dem Finger nach unten schiebst.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_KkcT7N": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/schritt-4_h0Rc.jpg",
+            "caption": "",
+            "heading": "Schneide überstehende Reste des Wimpernbands ab",
+            "text": "<h5></h5><p>Sollte an einem der Segmente das Wimpernband etwas überstehen, empfehlen wir dieses abzuschneiden. Denn das könnte am Auge als störend empfunden werden.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_GnehDR": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/howto-step1_0Ryq.webp",
+            "caption": "",
+            "heading": "Trage den Wimpernkleber auf",
+            "text": "<h5></h5><p>Tupfe den BOND GIRL Mascara Wimpernkleber im unteren Bereich deiner eigenen Wimpern auf. Tipp: Achte dabei darauf, die Spitzen deiner natürlichen Wimpern auszulassen für ein perfektes Ergebnis.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_Ddaj6i": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/WK_5060-You_Got_This-schwarz-web-horizontal-2_318063d4-56ed-4a40-a4a5-bf575118f632.webp",
+            "caption": "",
+            "heading": "Lash Band Method",
+            "text": "<p>Wenn du dich für den YOU GOT THIS Wimpernkleber aus der Tube entschieden hast, bringe eine Schicht des Wimpernklebers direkt auf deinem Wimpernband an. Option 1: Trage die Schicht vorsichtig mit der Tübchenspitze direkt auf das Wimpernband auf. Warte +/- 1 Minute ab und lass den Wimpernkleber leicht antrocknen !</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_NGi7yd": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/WK5070-YouGotThis-transparent-web-horizontal.webp",
+            "caption": "",
+            "heading": "Dipping Method",
+            "text": "<p>Option 2: Gib einen Klecks des YOU GOT THIS Wimpernklebers auf das Lash Pad oder die Innenseite deiner Box. Dippe die Tübchenspitze in einen Klecks des Wimpernklebers ein. Nutze die Tübchenspitze als Applikator und streiche mit der Spitze der Tube eine Schicht des daran haftenden Wimpernklebers auf das Wimpernband. Warte +/- 1 Minute ab und lass den Wimpernkleber leicht antrocknen !</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_AGUxN3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/schritt-2applizieren_ScVa.webp",
+            "caption": "",
+            "heading": "Appliziere deine Wimpernextensions",
+            "text": "<p>Nachdem du den Wimpernkleber kurz hast antrocknen lassen, appliziere die Wimpernextensions \"unter\" deinem natürlichen Wimpernkranz. Wichtig: Halte 1-2 mm Abstand zur Wasserlinie.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_Vr9xYF": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/schritt-3-verbinden_IAnb.webp",
+            "caption": "",
+            "heading": "Verbinde deine Wimpern mit den Wimpernextensions",
+            "text": "<p>Warte ca. 5 Minuten und presse dann die Wimpernextensions und deine natürlichen Wimpern mit Hilfe des Applikators zusammen, damit diese sich perfekt miteinander verbinden und du lange Freude daran hast.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_AteP7e": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/zu6071-letitgo-web-horizontal-2_DgDp.webp",
+            "caption": "",
+            "heading": "Versiegle den Wimpernkleber mit dem Top Coat",
+            "text": "<p>Mit dem SEAL THE DEAL Top Coat versiegelst du deine DIY Wimpernextensions nachdem du sie angebracht hast in dem du mit der Spitze des Applikators im unteren Bereich deiner Wimpernextensions entlang fährst.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_DhBgpJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/ZU_6071-Let_it_Go-web-horizontal-2.webp",
+            "caption": "",
+            "heading": "Entferne deine Wimpern nach der Tragezeit",
+            "text": "<p>Trage die Flüssigkeit des LET IT GO Removers unter und über deinen Wimpernextensions auf und lasse sie kurz einwirken (20-30 Sekunden genügen). Bürste die Wimpernextensions sanft von deinen Wimpern oder schiebe sie vorsichtig mit deinen Fingern nach unten. Nachdem du deine Wimpernextensions entfernt hast, kannst du mit dem feinen Micro-Bürstchen die Klebereste aus deinen eigenen Wimpern ganz einfach rauskämmen.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_DHdtac",
+        "row_KkcT7N",
+        "row_GnehDR",
+        "row_Ddaj6i",
+        "row_NGi7yd",
+        "row_AGUxN3",
+        "row_Vr9xYF",
+        "row_AteP7e",
+        "row_DhBgpJ"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_video_with_text_7DgDmV",
+    "custom_video_with_text_9yqCC8",
+    "custom_video_with_text_XWhpnX",
+    "multirow_xRLyFd"
+  ]
+}
