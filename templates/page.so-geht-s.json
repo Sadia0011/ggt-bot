@@ -19,39 +19,45 @@
     },
     "custom_video_with_text_7DgDmV": {
       "type": "custom-video-with-text",
+      "blocks": {
+        "video_with_text_fDYrDr": {
+          "type": "video-with-text",
+          "settings": {
+            "product_description_video": "",
+            "heading": "Anwendung des Bond Girl Mascara Wimpernklebers",
+            "heading_font_size": 16,
+            "description": "So einfach geht’s: Trage den Bond Girl Mascara Wimpernkleber direkt am Wimpernansatz auf. Du kannst sofort loslegen und deine DIY Lash Extensions anbringen. Fertig ist dein Lash-Look!",
+            "description_font_size": 16
+          }
+        },
+        "video_with_text_9CWNbt": {
+          "type": "video-with-text",
+          "settings": {
+            "product_description_video": "",
+            "heading": "Anwendung des Bond Girl Mascara Wimpernklebers",
+            "heading_font_size": 16,
+            "description": "So einfach geht’s: Trage den Bond Girl Mascara Wimpernkleber direkt am Wimpernansatz auf. Du kannst sofort loslegen und deine DIY Lash Extensions anbringen. Fertig ist dein Lash-Look!",
+            "description_font_size": 16
+          }
+        },
+        "video_with_text_YqtdEx": {
+          "type": "video-with-text",
+          "settings": {
+            "product_description_video": "",
+            "heading": "Anwendung des Bond Girl Mascara Wimpernklebers",
+            "heading_font_size": 16,
+            "description": "So einfach geht’s: Trage den Bond Girl Mascara Wimpernkleber direkt am Wimpernansatz auf. Du kannst sofort loslegen und deine DIY Lash Extensions anbringen. Fertig ist dein Lash-Look!",
+            "description_font_size": 16
+          }
+        }
+      },
+      "block_order": [
+        "video_with_text_fDYrDr",
+        "video_with_text_9CWNbt",
+        "video_with_text_YqtdEx"
+      ],
       "name": "custom-video-with-text",
       "settings": {
-        "product_description_video": "https://www.youtube.com/watch?v=YOH1UVkJqQM",
-        "heading": "Anwendung des Bond Girl Mascara Wimpernklebers",
-        "heading_font_size": 16,
-        "description": "So einfach geht’s: Trage den Bond Girl Mascara Wimpernkleber direkt am Wimpernansatz auf. Du kannst sofort loslegen und deine DIY Lash Extensions anbringen. Fertig ist dein Lash-Look!",
-        "description_font_size": 16,
-        "top_padding": 16,
-        "bottom_padding": 16
-      }
-    },
-    "custom_video_with_text_9yqCC8": {
-      "type": "custom-video-with-text",
-      "name": "custom-video-with-text",
-      "settings": {
-        "product_description_video": "https://www.youtube.com/watch?v=fmUoDXdg0eA",
-        "heading": "Anwendung des YouGotThis Wimpernklebers aus der Tube",
-        "heading_font_size": 16,
-        "description": "Streiche eine Schicht des YouGotThis Wimpernklebers auf das Wimpernband deiner DIY Wimpernextensions. Lass den Kleber +/- 1 Minute antrocknen und platziere die Lash Extensions dann unter deinen Naturwimpern – done!",
-        "description_font_size": 16,
-        "top_padding": 16,
-        "bottom_padding": 16
-      }
-    },
-    "custom_video_with_text_XWhpnX": {
-      "type": "custom-video-with-text",
-      "name": "custom-video-with-text",
-      "settings": {
-        "product_description_video": "https://www.youtube.com/watch?v=IVAc5AJs_1Y",
-        "heading": "Tipps & Tricks für das perfekte Ergebnis",
-        "heading_font_size": 16,
-        "description": "Für den perfekten Lash-Look braucht’s manchmal nur ein paar kleine Kniffe. Hier findest du alle Tipps und Tricks, um das perfekte Ergebnis und die beste Haltbarkeit zu erzielen.",
-        "description_font_size": 16,
         "top_padding": 16,
         "bottom_padding": 16
       }
@@ -191,8 +197,6 @@
   "order": [
     "main",
     "custom_video_with_text_7DgDmV",
-    "custom_video_with_text_9yqCC8",
-    "custom_video_with_text_XWhpnX",
     "multirow_xRLyFd"
   ]
 }
