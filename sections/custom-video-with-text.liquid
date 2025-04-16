@@ -46,11 +46,15 @@
   <div class="section-{{ section.id }}-padding">
     {% for block in section.blocks %}
       <div class="video-container ">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ block.settings.product_description_video.id }}?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div>
-        <h2 style="font-size: {{ block.settings.heading_font_size }}px;">{{ block.settings.heading }}</h2>
-        <p style="font-size: {{ block.settings.description_font_size }}px;">{{ block.settings.description }}</p>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ block.settings.product_description_video.id }}?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+        </div>
+            
+        <div>
+            <h2 style="font-size: {{ block.settings.heading_font_size }}px;">{{ block.settings.heading }}</h2>
+            <p style="font-size: {{ block.settings.description_font_size }}px;">{{ block.settings.description }}</p>
+        </div>
       </div>
     {% endfor %}
   </div>
